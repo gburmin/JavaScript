@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+
+
+
+        class NewNumber {
+            constructor() {}
+
+            makeObject(number) {
+                if (number < 0 || number > 999) {
+                    console.log("Вы ввели число не из заданного диапазона!");
+                    return; // пустой return это корректное решение для преждевременного завершения функции?
+                }
+                number = Number(number);
+                if (isNaN(number)) {
+                    console.log("Введите число!");
+                    return;
+                }
+                if (!Number.isInteger(number)) {
+                    console.log("Вы ввели не целое число!");
+                    return;
+                }
+                this.units = number % 10;
+                this.tens = Math.floor(number / 10) % 10;
+                this.hundreds = Math.floor(number / 100);
+            }
+        }
+
+        let a = new NewNumber();
+        a.makeObject(prompt("Введите целое число в диапазон от 0 до 999"));
+
+        console.log(a);
+    </script>
+</body>
+
+</html>
