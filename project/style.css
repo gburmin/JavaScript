@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #000;
+    align-items: center;
+}
+
+.products {
+    display: flex;
+}
+
+.product-item {
+    padding: 10px;
+    background-color: azure;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3, p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.buy-btn {
+    padding: 5px;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.buy-btn:hover {
+  background-color: rgb(255, 60, 76);
+  color: #ffffff;
+}
+
+.btn-cart {
+    padding: 10px;
+    margin: 5px;
+}
