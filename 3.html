@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="options">
+        <h3>Выберите размер гамбургера</h3>
+        <form action="#">
+            <input type="radio" id="sizeBig" name="size" value="big">
+            <label class="chooseSize" for="sizeBig">Большой</label>
+
+            <input type="radio" id="sizeSmall" name="size" value="small">
+            <label class="chooseSize" for="sizeSmall">Маленький</label>
+        </form>
+    </div>
+    <div class="options">
+        <form action="#">
+            <h3>Выберите начинку гамбургера</h3>
+            <input type="radio" id="stuffing1" name="stuffing" value="cheese">
+            <label class="chooseStuffing" for="stuffing1">Сыр</label>
+
+            <input type="radio" id="stuffing2" name="stuffing" value="salad">
+            <label class="chooseStuffing" for="stuffing2">Салат</label>
+
+            <input type="radio" id="stuffing2" name="stuffing" value="potato">
+            <label class="chooseStuffing" for="stuffing2">Картофель</label>
+        </form>
+    </div>
+    <div class="options">
+        <h3>Выберите дополнительные опции для гамбургера</h3>
+        <fieldset class="checkbox_element-box last">
+            <label for="seasoning">
+                <input id="seasoning" type="checkbox">
+                Посыпать приправой </label> <label for="mayo">
+                <input id="mayo" type="checkbox">
+                Полить майонезом </label> </fieldset>
+    </div>
+
+    <button class="calculateButton" style="margin-top: 10px;">Рассчитать стоимость и калорийность</button>
+    <script src="3.js"></script>
+</body>
+
+</html>
