@@ -3,62 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <script>
-        'use strict';
-        let Tc = prompt('Введите температуру в цельсиях');
-        let Tf = (9 / 5) * Tc + 32;
-        alert(`Температура в фаренгейтах = ${Tf}`);
+    <div id="app">
+        <header>
+            <div class="logo">E-shop</div>
+            <div class="cart">
+                <form action="#" class="search-form">
+                    <input type="text" class="search-field" v-model="userSearch">
+                    <button class="btn-search" type="submit" @click='filter'>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <button class="btn-cart" type="button" @click='show=!show'>Корзина</button>
+                <div class="cart-block" v-if='show'></div>
+            </div>
+        </header>
+        <main>
+            <div class="products">
+                <div class="product-item" v-for="product of filtered" :key="product.id_product">
+                    <img :src="imgCatalog" alt="Some img">
+                    <div class="desc">
+                        <h3>{{product.product_name}}</h3>
+                        <p>{{product.price}} $</p>
+                        <button class="buy-btn" @click="addProduct(product)">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous">
     </script>
-    <script>
-        "use strict"
-        let name = '"Василий"';
-        let admin = name;
-        console.log(admin);
-    </script>
-    <script>
-        'use strict';
-        /* 
-        1) 10 + 10 = 20
-        2) т.к. один из операндов строка, 20 приводится к такому же типу, как и "10", происходит контатенация "20" + "10" = "2010"
-        3) С помощью console.log выводим результат в консоль
-        */
-        console.log(10 + 10 + "10");
-
-        /*
-        1) т.к. один из операндов строка, 10 приводится к такому же типу, "10" + "10" = "1010"
-        2) точно так же, "1010" + "10" = "101010"
-        3) С помощью console.log выводим результат в консоль
-        */
-        console.log(10 + "10" + 10);
-
-        /*
-        1) 10 + 10 = 20
-        2) унарный плюс перед строковым типом данных переводит его в числовой, 20 + 10 = 30
-        3) С помощью console.log выводим результат в консоль
-        */
-        console.log(10 + 10 + +"10");
-
-        /*
-        1) "" - пустая строка
-        2) унарный минус переводит её в число -0
-        3) Число 10 делим на -0, получаем - бесконечность -Infinity
-        3) С помощью console.log выводим результат в консоль
-        */
-        console.log(10 / -"");
-        /*
-        1) Из-за неправильной записи через запятую "2,5" это строка
-        2) унарный плюс приводит к NaN
-        3) Число 10 делим на NaN, получаем NaN
-        3) С помощью console.log выводим результат в консоль
-        */
-        console.log(10 / +"2,5");
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
+
+<!--<div class="cart-item" data-id="${this.id_product}">-->
+<!--<div class="product-bio">-->
+<!--<img src="${this.img}" alt="Some image">-->
+<!--<div class="product-desc">-->
+<!--<p class="product-title">${this.product_name}</p>-->
+<!--<p class="product-quantity">Quantity: ${this.quantity}</p>-->
+<!--<p class="product-single-price">$${this.price} each</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="right-block">-->
+<!--<p class="product-price">${this.quantity*this.price}</p>-->
+<!--<button class="del-btn" data-id="${this.id_product}">&times;</button>-->
+<!--</div>-->
+<!--</div>-->
