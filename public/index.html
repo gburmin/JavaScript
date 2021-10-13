@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <script src="https://kit.fontawesome.com/dea90467db.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="header__box container">
+                <ul class="header__left">
+                    <li class="header__left_li"><a class="header_link" href="index.html"><img src="img/logo.svg"
+                                alt="logo"></a></li>
+                    <li class="header__left_li"><a class="header_link" href="#"><img src="img/search.svg"
+                                alt="search"></a>
+                    </li>
+                </ul>
+                <ul class="header__right">
+                    <li class="header__right_li">
+                        <details>
+                            <summary class="nav_menu_style"><img src="img/cataloge.svg" alt="cataloge"></summary>
+                            <nav class="header__cataloge_menu">
+                                <a class="close_header__cataloge_menu" href="#"><img src="img/close_menu.svg"
+                                        alt="close"></a>
+                                <h6 class="header__cataloge_head">MENU</h6>
+                                <a href="catalog.html" class="header__catalog_subhead"><span>MAN</span></a>
+                                <div class="header__cataloge__subbox">
+                                    <a href="#" class="header__cataloge_link">Accessories</a>
+                                    <a href="#" class="header__cataloge_link">Bags</a>
+                                    <a href="#" class="header__cataloge_link">Denim</a>
+                                    <a href="#" class="header__cataloge_link">T-Shirts</a>
+                                </div>
+                                <a href="catalog.html" class="header__catalog_subhead"><span>WOMAN</span></a>
+                                <div class="header__cataloge__subbox">
+                                    <a href="#" class="header__cataloge_link">Accessories</a>
+                                    <a href="#" class="header__cataloge_link">Jackets & Coats</a>
+                                    <a href="#" class="header__cataloge_link">Polos</a>
+                                    <a href="#" class="header__cataloge_link">T-Shirts</a>
+                                    <a href="#" class="header__cataloge_link">Shirts</a>
+                                </div>
+                                <a href="catalog.html" class="header__catalog_subhead"><span>KIDS</span></a>
+                                <div class="header__cataloge__subbox">
+                                    <a href="#" class="header__cataloge_link">Accessories</a>
+                                    <a href="#" class="header__cataloge_link">Jackets & Coats</a>
+                                    <a href="#" class="header__cataloge_link">Polos</a>
+                                    <a href="#" class="header__cataloge_link">T-Shirts</a>
+                                    <a href="#" class="header__cataloge_link">Shirts</a>
+                                    <a href="#" class="header__cataloge_link">Bags</a>
+                                </div>
+                            </nav>
+                        </details>
+                    </li>
+                    <li class="header__right_li header__right_li-none"><a class="header_link"
+                            href="registration.html"><img src="img/account.svg" alt="account"></a></li>
+                    <li class="header__right_li header__right_li-none">
+                        <cart ref='cart'></cart>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="top__banner ">
+            <div class="container top__banner_box">
+                <div class="top__banner_block">
+                    <div class="top__banner_line"> </div>
+                    <p class="top__banner_header"><span class="top__banner_brand">THE BRAND</span> <br>
+                        OF LUXERIOUS <span>FASHION</span></p>
+                </div>
+            </div>
+        </div>
+        <section class="top__offers container">
+            <div class="top__offers_parent">
+                <div class="top__offers_item"><a href="#"><img class="top__offers_img" src="img/offer_forwomen.png"
+                            alt="offer_forwomen"></a>
+                    <p class="top__offers_text">30% OFF <br>
+                        <span class="top__offers_span">FOR WOMEN</span> </p>
+                </div>
+                <div class="top__offers_item"><a href="#"><img class="top__offers_img" src="img/offer_forman.png"
+                            alt="offer_forman"></a>
+                    <p class="top__offers_text">HOT DEAL <br>
+                        <span class="top__offers_span">FOR MEN</span> </p>
+                </div>
+                <div class="top__offers_item"><a href="#"><img class="top__offers_img" src="img/offer_forkids.png"
+                            alt="offer_forkids"></a>
+                    <p class="top__offers_text">NEW ARRIVALS <br>
+                        <span class="top__offers_span">FOR KIDS</span> </p>
+                </div>
+            </div>
+            <div class="top__offers_accesories"><a href="#"><img class="top__offers_img top__offers_accesories_img"
+                        src="img/offer_assesories.png" alt="offer_assesories"></a>
+                <p class="top__offers_text top__offers_accesories_pos">LUXIROUS & TRENDY <br>
+                    <span class="top__offers_span">ACCESORIES</span> </p>
+            </div>
+
+        </section>
+        <section class="featured container">
+            <h3 class="feautered__header">Fetured Items</h3>
+            <p class="text featured__text_margin">Shop for items based on what we featured in this week</p>
+            <products ref="products"></products>
+            <a href="catalog.html" class="button">Browse All Product</a>
+        </section>
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <div class="footer__top_box">
+                        <div class="footer__top_item"><img class="footer__top_img" src="img/footer__top_item1.svg"
+                                alt="item1">
+                            <h4 class="footer__top_header">Free Delivery</h4>
+                            <p class="text footer__top_text">Worldwide delivery on all. Authorit tively morph
+                                next-generation innov tion with extensive models.</p>
+                        </div>
+                        <div class="footer__top_item"><img class="footer__top_img" src="img/footer__top_item2.svg"
+                                alt="item2">
+                            <h4 class="footer__top_header">Sales & discounts</h4>
+                            <p class="text footer__top_text">Worldwide delivery on all. Authorit tively morph
+                                next-generation innov tion with extensive models.</p>
+                        </div>
+                        <div class="footer__top_item"><img class="footer__top_img" src="img/footer__top_item3.svg"
+                                alt="item3">
+                            <h4 class="footer__top_header">Quality assurance</h4>
+                            <p class="text footer__top_text">Worldwide delivery on all. Authorit tively morph
+                                next-generation innov tion with extensive models.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__middle">
+                <div class="container">
+                    <div class="footer__middle_box">
+                        <div class="footer__middle_item"><img src="img/footer__middle_img.svg" alt="image">
+                            <p class="footer__middle_text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                                pulvinar purus condimentum“</p>
+                        </div>
+                        <div class="footer__middle_item">
+                            <h5 class="footer__middle_header"><span class="footer__middle_uppercase"> SUBSCRIBE </span>
+                                <br>
+                                FOR OUR NEWLETTER AND PROMOTION</h5>
+                            <form class="footer__middle_form" action="#">
+                                <input class="email__form" type="email" placeholder="     Enter Your Email">
+                                <button class="btn_submit" type="submit">Subscribe</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="container footer__bot_box">
+                    <p class="copyright">© 2021 Brand All Rights Reserved.</p>
+                    <ul class="links">
+                        <li class="li_pos"><a class="soclink" href="https://www.facebook.com" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a></li>
+                        <li class="li_pos"><a class="soclink" href="https://www.instagram.com" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="li_pos"><a class="soclink" href="https://www.pinterest.com" target="_blank"><i
+                                    class="fab fa-pinterest-p"></i></a></li>
+                        <li class="li_pos"><a class="soclink" href="https://www.twitter.com" target="_blank"><i
+                                    class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/ProductComponent.js"></script>
+    <script src="js/CartComponent.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
