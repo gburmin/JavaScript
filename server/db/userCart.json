@@ -1,0 +1,20 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 2,
+            "id_product": 3,
+            "product_name": "ELLERY CAPSULE",
+            "price": 538,
+            "imgPath": "img/card3.png"
+        },
+        {
+            "quantity": 1,
+            "id_product": 2,
+            "product_name": "ELLERY X ",
+            "price": 128,
+            "imgPath": "img/card2.png"
+        }
+    ]
+}
